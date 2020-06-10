@@ -34,3 +34,10 @@ To achieve this, I have used **`module-alias`** package and I need to do some co
 
 ### Nodemon
 Useful to restart project on file change
+
+### Logging
+One of the important thing we overlook starting a project is logging. New or junior developers have the tendancy to use `console.log` which is not going to help in production. We need to write logs in the file system so that it can be accesible and searchable. I've used **`winston`** logging library with custom formatting. My preferred logging format is
+
+`timestamp [function name] logging level: message - stringified arguments`
+
+Adding function name/label in the logs helps me search quickly in log files.

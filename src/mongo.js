@@ -7,7 +7,7 @@ mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopo
 const db = mongoose.connection
 db.on('error', () => logger.error('Cannot connect Mongodb'))
 db.once('open', function() {
-  logger.info('Mongodb Connected', 'aaaa')
+  logger.info('Mongodb Connected')
 });
 
 

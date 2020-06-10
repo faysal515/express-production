@@ -5,15 +5,17 @@ const { combine, timestamp, label, printf, colorize } = winston.format
 
 const myFormat = printf((input) => {
   const { level, message, label, timestamp, ...other } = input
-  return `${timestamp} [${label}] ${level}: ${message} - ${JSON.stringify(other, null, 2)}`;
+  const args = Array.isArray(other[Symbol.for('splat')]) ? other[Symbol.for('splat')] : []
+  const strArgs = args.map(JSON.stringify).join(' ')
+  return `${timestamp} [${label}] ${level}: ${message} - ${strArgs}`;
 });
 
-
 const logger = function(labelName) {
-  // console.log(`New logger - ${labelName}`)
-  const formats = [label({ label: labelName }),
+  const formats = [
+    label({ label: labelName }),
     timestamp(),
-    myFormat]
+    myFormat
+  ]
   
 
     const consoleFormats = [label({ label: labelName }),

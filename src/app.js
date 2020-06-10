@@ -13,7 +13,6 @@ app.use((req, res, next) => {
   next()
 })
 
-
 app.post('/signup', SignupRoute)
 app.post('/login', LoginRoute)
 
