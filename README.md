@@ -1,4 +1,4 @@
-This is my version of building a production ready express application. Internet is already spoiled with so many production-ready boilerplates. They're using cool and hard-to-understand design patterns. My approach is to simplify the process. A properly documentation is on progress. Hope this helps
+This is my version of building a production ready express application. Internet is already spoiled with so many production-ready boilerplates. They're using cool and hard-to-understand design patterns. My approach is to write easy to understand and easy to maintain code. A properly written documentation is on progress. Hope this helps
 
 
 ## Comments
